@@ -4,5 +4,11 @@
   "scripts": {
     "build": "cd client && npm install && npm run build",
     "start": "cd backend && npm install && node server.js"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.7.0",
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "resend": "^3.2.0"
   }
 }

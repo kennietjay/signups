@@ -6,7 +6,7 @@ import axios from "axios";
 import logo from "../../public/images/sababu-logo.png";
 import supabase from "../supabase";
 
-const baseUrl = process.env.VITE_BASE_URL;
+const apiUrl = "/.netlify/functions/send-email";
 
 function Home() {
   const [isSignup, setIsSignup] = useState(false);
@@ -49,25 +49,10 @@ function Home() {
   }, [loadMeetings]);
 
   //
-  const sendEmail = async () => {
+  const sendEmail = async (emailData) => {
     try {
       console.log("Sending request to server");
-      const res = await axios.post("http://localhost:5000/send-email", {
-        // Change this line
-        recipientName: formData.first_name,
-        recipientEmail: formData.email,
-        meetingSubject: "Mid Year Review - 2024",
-        member: formData.member,
-        templateData: {
-          date: "2024-07-07",
-          time: "5:00 PM",
-          venue: "Zoom",
-          meetingLink:
-            "https://us06web.zoom.us/j/87029572621?pwd=YWr9RLg5jT6Mobrb0H7Hlghy9TTeK6.1",
-          meetingId: "870 2957 2621",
-          passcode: "038273",
-        },
-      });
+      const res = await axios.post(`${apiUrl}`, emailData);
 
       console.log(formData.meetingSubject);
 

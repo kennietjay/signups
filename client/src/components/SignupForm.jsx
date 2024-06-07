@@ -137,7 +137,26 @@ function SignupForm({
         return false; // Return false to indicate the signup was not created
       } else {
         // Attempt to send the email first
-        const emailSent = await sendEmail();
+
+        //
+        const emailData = {
+          // Change this line
+          recipientName: formData.first_name,
+          recipientEmail: formData.email,
+          meetingSubject: "Mid Year Review - 2024",
+          member: formData.member,
+          templateData: {
+            date: "2024-07-07",
+            time: "5:00 PM",
+            venue: "Zoom",
+            meetingLink:
+              "https://us06web.zoom.us/j/87029572621?pwd=YWr9RLg5jT6Mobrb0H7Hlghy9TTeK6.1",
+            meetingId: "870 2957 2621",
+            passcode: "038273",
+          },
+        };
+
+        const emailSent = await sendEmail(emailData);
 
         if (!emailSent) {
           setErrorMsg("Failed to send confirmation email. Signup aborted.");
