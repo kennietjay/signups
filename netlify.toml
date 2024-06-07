@@ -1,5 +1,6 @@
 [build]
   command = "npm run build"
+  base = "client"
   publish = "/opt/build/repo/client/dist"
 
 
