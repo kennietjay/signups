@@ -1,4 +1,5 @@
 [submodule "backend"]
     path = backend
     url = https://github.com/kennietjay/signups.git
+    branch = main  # Ensure this matches the branch you intend to use
 
