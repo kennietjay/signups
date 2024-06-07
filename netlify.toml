@@ -1,13 +1,13 @@
 [build]
   command = "npm run build"
   base = "client"
-  publish = "client/dist"
+publish = "/opt/build/repo/client/dist"
 
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  
+
 [functions]
   directory = "backend"
