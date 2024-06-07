@@ -6,7 +6,7 @@ import axios from "axios";
 import logo from "../../public/images/sababu-logo.png";
 import supabase from "../supabase";
 
-const apiUrl = "/.netlify/functions/send-email";
+const apiUrl = "https://sababufund.netlify.app/.netlify/functions/send-email";
 
 function Home() {
   const [isSignup, setIsSignup] = useState(false);
