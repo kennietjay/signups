@@ -1,0 +1,105 @@
+/* Edit Profile and Sign up */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.modalContent {
+  max-width: 44rem;
+  max-height: 55rem;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  overflow-y: scroll;
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  margin-bottom: 4.4rem;
+  border-radius: 0.5rem;
+}
+
+.modalContent form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modalContent form .inputControl {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalContent form .inputControl label {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.modalContent input {
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+}
+
+.modalContent button {
+  background-color: #dfb895;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit {
+  margin-top: 4.8rem;
+}
+
+.modalContent button:hover {
+  background-color: #855b3a;
+  color: #faf1e8;
+}
+
+.radioInputBoxes {
+  display: flex;
+  align-items: start;
+  gap: 2.4rem;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.radioInput {
+  margin-right: 0.2rem;
+}
+
+@media screen and (max-width: 40rem) {
+  /* Edit Profile and Sign up */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+  }
+}

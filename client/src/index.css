@@ -1,0 +1,264 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #4e4135;
+  text-decoration: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  color: #4e4135;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+button {
+  background-color: #dfb895;
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border: 0.2rem solid #fff;
+  color: #4e4135;
+}
+
+button:hover {
+  transition: background-color 0.25s;
+  background-color: #b9916f;
+  color: #faf1e8;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 0.4rem auto -webkit-focus-ring-color;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+.section {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.2),
+      rgba(36, 42, 46, 0.2)
+    ),
+    url("/public/images/sb-bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: 75vh;
+  min-height: 48rem;
+  border-radius: 2rem;
+}
+
+.logo {
+  color: #faf1e8;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 0.1rem;
+  top: 0rem;
+  left: 0rem;
+}
+
+.logo img {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* Meet details component */
+.meeting-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.4rem;
+  width: 90%;
+  color: #faf1e8;
+  position: absolute;
+  padding: 1.2rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -10%);
+}
+
+.meeting-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.meeting-details p {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  border-radius: 2rem;
+}
+
+/* RSVP component */
+.rsvpList {
+  border-radius: 2rem;
+  background-color: #faf1e8;
+  text-align: left;
+  padding: 2.4rem;
+}
+
+.rsvpList ol {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-container.header {
+  font-weight: 600;
+}
+
+.list-container {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 0.1fr 15rem 10rem;
+  gap: 1rem;
+}
+
+/* Sing up Table */
+.signup-table {
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.signup-table th,
+.signup-table td {
+  border: 0.1rem solid #bbbbbb;
+  padding: 0.8rem;
+  text-align: left;
+  word-wrap: break-word; /* Break long words to wrap */
+  white-space: normal; /* Ensure white spaces are wrapped */
+}
+
+.signup-table th {
+  background-color: #dccec1;
+  text-align: left;
+}
+
+.signup-table .number-column {
+  width: 3.6rem;
+  white-space: nowrap;
+}
+
+/* Footer section */
+.copy-right {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-top: 0.01rem solid #dccec1;
+}
+
+.last-update {
+  color: #4e4135;
+}
+
+/*  */
+@media screen and (max-width: 40rem) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  /* Meet details component */
+  .meeting-details {
+    gap: 1.4rem;
+    color: #faf1e8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 5%);
+  }
+
+  .logo {
+    color: #faf1e8;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.1rem;
+    top: 0.2rem;
+    left: 0.2rem;
+  }
+
+  .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .logo h2 {
+    font-size: 2rem;
+  }
+
+  /* Sing up Table */
+  .signup-table {
+    font-size: 1.4rem;
+    margin: 1rem auto;
+  }
+}
